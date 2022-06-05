@@ -12,7 +12,18 @@
 
   <body>
     <header>
+    <% if admin_signed_in? %>
+      <li>
+        <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to "ログイン", new_admin_session_path %>
+      </li>
+    <% end %>
       <a href="/admin/genres">ジャンル一覧</a>
+      <a href="/admin/sign_in">ログイン</a>
+      <a href="/admin/items">商品一覧</a>
     </header>
     <%= yield %>
     <footer></footer>

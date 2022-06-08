@@ -1,0 +1,20 @@
+<h1>注文履歴詳細</h1>
+
+<span>購入者</span>
+  <%= link_to admin_customer_path(@customer.id) do %>
+    <%= @order.customer.full_name %>
+  <% end %></br>
+
+<span>注文日</span>
+  <%= @order.created_at %>
+
+<span>配送先</span>
+  〒<%= @order.postal_code%>　<%= @order.address %>
+
+<span>支払方法</span>
+ <%= @order.payment_method_i18n %>
+
+<span>注文ステータス</span>
+<%= form_with model: @order, url: admin_order_path(@order.id) do |f| %>
+  <%= f.select :status, @order.map{ |status|%>
+<% end %>

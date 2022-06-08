@@ -6,20 +6,32 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Admin.create!(
-  email: "arutema.ke@gmail.com",
-  password: "arutema"
-  )
+# Admin.create!(
+#   email: "arutema.ke@gmail.com",
+#   password: "arutema"
+#   )
 
-Customer.create!(
-  last_name: "田中",
-  first_name: "ひろし",
-  last_name_kana: "タナカ",
-  first_name_kana: "ヒロシ",
-  email: "tanaka.i@gmail.com",
-  password: "tanaka11",
+# Customer.create!(
+#   last_name: "田中",
+#   first_name: "ひろし",
+#   last_name_kana: "タナカ",
+#   first_name_kana: "ヒロシ",
+#   email: "tanaka.i@gmail.com",
+#   password: "tanaka11",
+#   postal_code: "8300038",
+#   address: "田中県田中市",
+#   telephone_number: "05032261842",
+#   is_active: "true"
+#   )
+
+Order.create!(
+  customer_id: "1",
   postal_code: "8300038",
   address: "田中県田中市",
-  telephone_number: "05032261842",
-  is_active: "true"
+  name: "田中ヒロシ",
+  shipping_cost: "500",
+  total_payment: "1500",
+  payment_method: "credit_card",
+  status: "a",
   )
+

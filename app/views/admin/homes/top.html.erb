@@ -10,7 +10,18 @@
     </tr>
 　</thead>
     <tbody>
+    <% @orders.each do |order| %>
+        <tr>
 
+          <td><%= order.created_at %></td>
+
+          <td><%= customer %></td>
+
+          <td><%= amount %></td>
+
+          <td><%= status %></td>
+        </tr>
+      <% end %>
     </tbody>
 　</table>
 　<%= paginate @orders %>

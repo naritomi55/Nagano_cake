@@ -24,14 +24,31 @@
 #   is_active: "true"
 #   )
 
-Order.create!(
-  customer_id: "1",
-  postal_code: "8300038",
-  address: "田中県田中市",
-  name: "田中ヒロシ",
-  shipping_cost: "500",
-  total_payment: "1500",
-  payment_method: "credit_card",
-  status: "a",
-  )
+# Order.create!(
+#   customer_id: "1",
+#   postal_code: "8300038",
+#   address: "田中県田中市",
+#   name: "田中ヒロシ",
+#   shipping_cost: "500",
+#   total_payment: "1500",
+#   payment_method: "credit_card",
+#   status: "a",
+#   )
+
+OrderDetail.create!([
+  {
+  item_id: "1",
+  order_id: "1",
+  amount: "2",
+  price: "1200",
+  making_status: "a"
+  },
+  {
+  item_id: "2",
+  order_id: "1",
+  amount: "2",
+  price: "1200",
+  making_status: "a"
+  }])
+
 

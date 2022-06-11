@@ -11,7 +11,8 @@
   <span>ジャンル</span>
     <%= @item.genre.name %></br>
 
-  <span>税込価格</span>
+  <span>税込価格</br>
+  (税抜価格)</span>
     <%= @item.add_tax_price %>(<%= @item.price %>)円</br>
 
   <span>販売ステータス</span>

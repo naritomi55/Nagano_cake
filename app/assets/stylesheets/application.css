@@ -14,3 +14,33 @@
  *= require_self
  */
 
+input[type="text"] {
+        width: 300px;
+        height: 40px;
+}
+
+input[type="number"] {
+        width: 300px;
+        height: 40px;
+}
+
+input[type="select"] {
+        width: 300px;
+        height: 40px;
+}
+
+input[type="password"] {
+        width: 300px;
+        height: 40px;
+}
+
+input[type="email"] {
+        width: 300px;
+        height: 40px;
+}
+
+textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+}

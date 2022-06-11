@@ -1,4 +1,8 @@
-<h1>商品一覧</h1><a href="/admin/items/new">+</a>
+<div class="container">
+<h1>商品一覧</h1>
+<div class="text-right">
+  <a href="/admin/items/new" class="btn btn-secondary rounded-circle">+</a>
+</div>
  <table class="table table-hover table-inverse">
 　<thead>
    <tr>
@@ -30,4 +34,5 @@
     </tbody>
 　</table>
 　<%= paginate @items %>
+</div>
 

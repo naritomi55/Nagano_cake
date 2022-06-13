@@ -1,28 +1,61 @@
 <h1><%= @customer.full_name %>さんの会員詳細</h1>
+</br>
+<div class="container">
 
-<span>会員ID</span>
- <%= @customer.id %></br>
+ <div class="row">
+  <div class="col-2 text-left mb-auto">会員ID</div>
+  <div class="col-10 text-left"><%= @customer.id %></div>
+ </div>
+</br>
 
-<span>氏名</span>
- <%= @customer.last_name %>　<%= @customer.first_name %></br>
+ <div class="row">
+  <div class="col-2 text-left mb-auto">氏名</div>
+  <div class="col-10 text-left"><%= @customer.last_name %>　<%= @customer.first_name %></div>
+ </div>
+</br>
 
-<span>フリガナ</span>
- <%= @customer.last_name_kana %>　<%= @customer.first_name_kana %></br>
+ <div class="row">
+  <div class="col-2 text-left mb-auto">フリガナ</div>
+  <div class="col-10 text-left"><%= @customer.last_name_kana %>　<%= @customer.first_name_kana %></div>
+ </div>
+</br>
 
-<span>郵便番号</span>
- <%= @customer.postal_code %></br>
+ <div class="row">
+  <div class="col-2 text-left mb-auto">郵便番号</div>
+  <div class="col-10 text-left"><%= @customer.postal_code %></div>
+ </div>
+</br>
 
-<span>住所</span>
- <%= @customer.address %></br>
+ <div class="row">
+  <div class="col-2 text-left mb-auto">住所</div>
+  <div class="col-10 text-left"><%= @customer.address %></div>
+ </div>
+</br>
 
-<span>電話番号</span>
- <%= @customer.telephone_number %></br>
+ <div class="row">
+  <div class="col-2 text-left mb-auto">電話番号</div>
+  <div class="col-10 text-left"><%= @customer.telephone_number %></div>
+ </div>
+</br>
 
-<span>メールアドレス</span>
- <%= @customer.email %></br>
+ <div class="row">
+  <div class="col-2 text-left mb-auto">メールアドレス</div>
+  <div class="col-10 text-left"><%= @customer.email %></div>
+ </div>
+</br>
 
-<span>会員ステータス</span>
- <%= @customer.is_active == true ? "有効" : "退会" %></br>
+ <div class="row">
+  <div class="col-2 text-left mb-auto">会員ステータス</div>
+  <div class="col-10 text-left text-success font-weight-bold"><%= @customer.is_active == true ? "有効" : "退会" %></div>
+ </div>
+</br>
 
-<%= link_to '編集する', edit_admin_customer_path %>
-<%= link_to '注文履歴一覧を見る', admin_customers_path %>
+ <div class="row">
+  <div class="col-md-4 offset-md-2">
+   <%= link_to '編集する', edit_admin_customer_path, class:"btn btn-success" %>
+  </div>
+  <div class="col-md-4.ms-auto">
+   <%= link_to '注文履歴一覧を見る', admin_customers_path, class:"btn btn-info" %>
+  </div>
+ </div>
+</div>

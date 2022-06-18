@@ -48,3 +48,9 @@ textarea {
 .background {
   background-image: url('yappari.jpg');
 }
+
+  .notice {
+    background-color: lightBlue;
+    text-align: center;
+    color: white;
+  }

@@ -9,8 +9,10 @@ Rails.application.routes.draw do
     get '/about' => 'homes#about'
     get '/customers/my_page' => 'customers#show'
     get '/customers/edit' => 'customers#edit'
+    patch '/customers' => 'customers#update'
+    get '/customers/confirm' => 'customers#confirm'
+    patch '/customers/withdraw' => 'customers#withdraw'
     resources :items, only: [:index, :show]
-    resources :customers, only: [:confirm, :withdraw]
   end
 
   devise_for :customers,skip: [:passwords], controllers: {

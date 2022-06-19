@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get '/customers/confirm' => 'customers#confirm'
     patch '/customers/withdraw' => 'customers#withdraw'
     resources :items, only: [:index, :show]
+    resources :addresses, only: [:index, :edit, :create, :update, :destroy]
   end
 
   devise_for :customers,skip: [:passwords], controllers: {

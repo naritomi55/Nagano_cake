@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     patch '/customers/withdraw' => 'customers#withdraw'
     resources :items, only: [:index, :show]
     resources :addresses, only: [:index, :edit, :create, :update, :destroy]
+    resources :cart_items, only: [:index, :create, :update, :destroy]
+    delete '/cart_items/destroy_all' => 'cart_items#destroy_all'
   end
 
   devise_for :customers,skip: [:passwords], controllers: {

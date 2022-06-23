@@ -9,7 +9,7 @@ class Public::CustomersController < ApplicationController
 
   def update
     current_customer.update(customer_params)
-    redirect_to customers_my_page_path(current_customer.id)
+    redirect_to customers_my_page_path
   end
 
   def confirm

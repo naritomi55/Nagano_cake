@@ -1,0 +1,12 @@
+=> [32m#<Order:0x000000000600c778[0m
+ id: [1;36mnil[0m,
+ customer_id: [1;36mnil[0m,
+ postal_code: [31m[1;31m"[0m[31m8300038[1;31m"[0m[31m[0m,
+ address: [31m[1;31m"[0m[31m吉田県田中市[1;31m"[0m[31m[0m,
+ name: [31m[1;31m"[0m[31mたかし梅田[1;31m"[0m[31m[0m,
+ shipping_cost: [1;36mnil[0m,
+ total_payment: [1;36mnil[0m,
+ payment_method: [31m[1;31m"[0m[31mcredit_card[1;31m"[0m[31m[0m,
+ status: [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m,
+ created_at: [1;36mnil[0m,
+ updated_at: [1;36mnil[0m[32m>[0m

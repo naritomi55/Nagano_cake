@@ -1,2 +1,62 @@
-<h1>Public::Orders#confirm</h1>
-<p>Find me in app/views/public/orders/confirm.html.erb</p>
+<div class="container">
+  <h3>注文情報確認</h3>
+  <div class="row">
+    <div class="col-md-7 offset-md-1">
+      <table class="table table-hover table-inverse border">
+        <thead class="thead-light">
+          <tr>
+            <th>商品名</th>
+            <th>単価(税込)</th>
+            <th>数量</th>
+            <th>小計</th>
+          </tr>
+        </thead>
+          <tbody>
+            <% sum = 0 %>
+            <% @cart_items.each do |item| %>
+            <tr>
+              <td>
+                <%= image_tag item.item.image, size:"40x30" %>
+                <%= item.item.name %>
+              </td>
+              <td>
+                <%= item.item.add_tax_price %>
+              </td>
+              <td>
+                <%= item.amount %>
+              </td>
+              <td>
+                <%= (item.item.add_tax_price)*(item.amount) %>
+                <% sum = sum+(item.item.add_tax_price)*(item.amount) %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+      </table>
+    </div>
+    <div class="col-md-3 offset-md-1">
+      <div class="row">
+        <p class="font-weight-bold">商品合計</p>
+        <div class="col"><%= sum %></div>
+      </div>
+
+      <div class="row">
+        <p class="font-weight-bold">送料</p>
+        <div class="col"><%= @order.shipping_cost %></div>
+      </div>
+
+      <div class="row">
+        <p class="font-weight-bold">請求金額合計</p>
+        <div class="col"><%= @order.total_payment %></div>
+      </div>
+    </div>
+  </div>
+  <span class="font-weight-bold">支払方法</span>
+    <%= @order.payment_method_i18n %></br>
+  <span class="font-weight-bold">お届け先</span>
+    〒<%= @order.postal_code %><%= @order.address %></br>
+    <%= @order.name %></br>
+  <div class="text-center">
+    <%= link_to "注文を確定する", orders_path, method: :post ,class:"btn btn-success"%>
+  </div>
+</div>

@@ -54,3 +54,6 @@ textarea {
     text-align: center;
     color: white;
   }
+  .pagination {
+  justify-content: center;
+}

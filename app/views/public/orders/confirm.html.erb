@@ -34,22 +34,21 @@
           </tbody>
       </table>
     </div>
-    <div class="col-md-3 offset-md-1">
-
-      <div class="row">
-        <p class="font-weight-bold">送料</p>
-        <div class="col"><%= @order.shipping_cost %></div>
-      </div>
-
-      <div class="row">
-        <p class="font-weight-bold">商品合計</p>
-        <div class="col"><%= sum %></div>
-      </div>
-
-      <div class="row">
-        <p class="font-weight-bold">請求金額合計</p>
-        <div class="col"><%= sum+@order.shipping_cost %></div>
-      </div>
+    <div class="col-md-4">
+      <table class="table border">
+        <tr class="border">
+          <th class="border bg-light col-2">送料</th>
+          <td class="col-2"><%= @order.shipping_cost %></td>
+        </tr>
+        <tr class="border">
+          <th class="border bg-light col-2">商品合計</th>
+          <td class="col-2"><%= sum %></td>
+        </tr>
+        <tr class="border">
+          <th class="border bg-light col-2">請求金額合計</th>
+          <td class="col-2"><%= sum+@order.shipping_cost %></td>
+        </tr>
+      </table>
     </div>
   </div>
   <span class="font-weight-bold">支払方法</span>
@@ -64,7 +63,7 @@
       <%= f.hidden_field :postal_code %>
       <%= f.hidden_field :payment_method %>
       <%= f.hidden_field :shipping_cost %>
-      <%= f.hidden_field :total_payment, value: sum+@order.shipping_cost %>
+      <%= f.hidden_field :total_payment, value: sum %>
       <%= f.submit "注文を確定する" , class:"btn btn-success"%>
     <% end %>
   </div>

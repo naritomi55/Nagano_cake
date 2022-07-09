@@ -6,8 +6,10 @@ class Public::ItemsController < ApplicationController
       genre = Genre.find(params[:genre_id])
       @text = genre.name
       @items = genre.items.page(params[:page])
+      @all_item = genre.items
     else
       @text = '商品'
+      @all_item = Item.all
       @items = Item.page(params[:page])
     end
   end

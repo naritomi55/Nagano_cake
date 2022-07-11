@@ -1,9 +1,14 @@
 <div class="container">
-<%= render 'genre search', genres: @genres %>
-  <div>
-    <%= image_tag @item.image, size: "200x200" %>
-    <p class="lead font-weight-bold"><%= @item.name %></p></br>
+  </br>
+  <div class="row">
+    <%= render 'genre search', genres: @genres %>
+    <div class="col-md-3 offset-md-1">
+      <%= image_tag @item.image, size: "200x200" %>
+    </div>
+    <div class="col-md-5">
+    <p class="lead font-weight-bold"><%= @item.name %></p>
     <%= @item.introduction %></br>
+    </br>
     <span class="lead font-weight-bold">￥<%= @item.add_tax_price.to_s(:delimited) %></span>(税込)
 
     <%= form_with model: @cart_item, url: cart_items_path do |f| %>
@@ -13,5 +18,10 @@
         　　<%= f.submit "カートに入れる", class:"btn btn-success" %>
       </div>
     <% end %>
+    </div>
+
+    </div>
+
   </div>
+
 </div>
